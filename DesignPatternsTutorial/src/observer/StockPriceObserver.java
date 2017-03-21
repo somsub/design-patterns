@@ -20,7 +20,7 @@ public class StockPriceObserver implements Observable {
 		 printPrices();
 	}
 	private void printPrices() {
-		System.out.println("The price is " + this.stockPrices );
+		System.out.println(this.observerId +  " observer:  The price is " + this.stockPrices );
 	}
 
 		public void setObserverId(int observerId) {
