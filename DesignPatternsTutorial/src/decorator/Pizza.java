@@ -1,6 +1,6 @@
 package decorator;
 
 public interface Pizza {
-	public String getName();
-	public String getToppings();
+	public String getDescription();
+	public double getPrice();
 }

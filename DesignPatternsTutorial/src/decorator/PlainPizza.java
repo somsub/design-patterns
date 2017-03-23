@@ -1,15 +1,19 @@
 package decorator;
 
 public class PlainPizza implements Pizza {
-
-	@Override
-	public String getName() {
-		return "Plain Pizza";
+	
+	public PlainPizza() {
+		System.out.println("Adding Dough");
 	}
 
 	@Override
-	public String getToppings() {
-		return "Regular Plain Cheese";
+	public String getDescription() {
+		return "Thin crust plain pizza";
 	}
+
+	@Override
+	public double getPrice() {
+		return 7.0;
+	}	
 
 }
