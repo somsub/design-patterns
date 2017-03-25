@@ -7,26 +7,26 @@ public class FourWheelerFactory {
 		FourWheeler fourWheeler = null;
 		switch(type){
 			case "SportsCar": 
-				fourWheeler = SportsCar.create();
+				fourWheeler = new SportsCar();
 				break;
 			case "Truck": 
-				fourWheeler = Truck.create();
+				fourWheeler = new Truck();
 				break;
 			case "CompactCar":
-				fourWheeler = CompactCar.create();
+				fourWheeler = new CompactCar();
 				break;
 			default:
-				fourWheeler = None4FourWheeler.create();
+				fourWheeler = new None4FourWheeler();
 				break;	
 		}
 		return fourWheeler;
 	}
 	
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
-		System.out.println("What kind of 4 wheeler do you want to create? (S/T/C)");
-		if(input.hasNextLine()){
-			String userSelection = input.nextLine();
+		Scanner userInput = new Scanner(System.in);
+		System.out.println("What kind of 4 wheeler do you want to create? (SportsCar/Truck/CompactCar)");
+		if(userInput.hasNextLine()){
+			String userSelection = userInput.nextLine();
 			System.out.println(FourWheelerFactory.create(userSelection));
 					
 		}
